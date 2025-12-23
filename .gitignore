@@ -4,6 +4,12 @@
 # Source files (not needed in repo)
 stitch_apel_design_the_aviator_landing/
 website/
+Photos - 2514 Cayman Road Malibu/
 
 # Zip files
 *.zip
+
+# Old duplicate images (using root versions)
+AAD-website.png
+vittal_face-website.png
+image.webp
