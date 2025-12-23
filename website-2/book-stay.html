@@ -127,7 +127,7 @@
 <section>
 <div class="flex items-center justify-between mb-6">
 <h3 class="text-white text-xl font-bold uppercase tracking-widest">01. Select Dates</h3>
-<span class="text-xs text-text-gray uppercase tracking-widest border border-white/10 px-3 py-1 rounded">Nov 2023</span>
+<span id="month-badge" class="text-xs text-text-gray uppercase tracking-widest border border-white/10 px-3 py-1 rounded">Nov 2023</span>
 </div>
 <div class="bg-primary/5 border-l-2 border-primary p-4 mb-8 flex gap-4">
 <span class="material-symbols-outlined text-primary">info</span>
@@ -138,55 +138,12 @@
 </div>
 <div class="frosted-glass p-8 rounded select-none">
 <div class="flex justify-between items-center mb-8">
-<button class="text-text-gray hover:text-white transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
-<span class="text-white font-bold uppercase tracking-widest text-lg">November 2023</span>
-<button class="text-text-gray hover:text-white transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+<button id="prev-month" class="text-text-gray hover:text-white transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<span id="current-month" class="text-white font-bold uppercase tracking-widest text-lg">November 2023</span>
+<button id="next-month" class="text-text-gray hover:text-white transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
 </div>
-<div class="grid grid-cols-7 gap-y-8 gap-x-2 text-center">
-<span class="text-text-gray text-[10px] font-bold uppercase tracking-widest">Mon</span>
-<span class="text-text-gray text-[10px] font-bold uppercase tracking-widest">Tue</span>
-<span class="text-text-gray text-[10px] font-bold uppercase tracking-widest">Wed</span>
-<span class="text-text-gray text-[10px] font-bold uppercase tracking-widest">Thu</span>
-<span class="text-text-gray text-[10px] font-bold uppercase tracking-widest">Fri</span>
-<span class="text-text-gray text-[10px] font-bold uppercase tracking-widest text-primary">Sat</span>
-<span class="text-text-gray text-[10px] font-bold uppercase tracking-widest text-primary">Sun</span>
-<span></span><span></span>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">1</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">2</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">3</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">4</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">5</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray hover:text-white text-sm transition-colors rounded hover:bg-white/5">6</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray hover:text-white text-sm transition-colors rounded hover:bg-white/5">7</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray hover:text-white text-sm transition-colors rounded hover:bg-white/5">8</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray hover:text-white text-sm transition-colors rounded hover:bg-white/5">9</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray hover:text-white text-sm transition-colors rounded hover:bg-white/5">10</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray hover:text-white text-sm transition-colors rounded hover:bg-white/5">11</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray hover:text-white text-sm transition-colors rounded hover:bg-white/5">12</button>
-<div class="relative group">
-<button class="h-10 w-10 mx-auto flex items-center justify-center bg-primary text-white font-bold text-sm shadow-[0_0_15px_rgba(209,0,26,0.5)] rounded z-10 relative">13</button>
-<div class="absolute top-1/2 left-1/2 w-full h-8 -translate-y-1/2 bg-primary/20 -z-0"></div>
-</div>
-<div class="relative group">
-<button class="h-10 w-10 mx-auto flex items-center justify-center bg-primary text-white font-bold text-sm shadow-[0_0_15px_rgba(209,0,26,0.5)] rounded z-10 relative">14</button>
-<div class="absolute top-1/2 right-1/2 w-full h-8 -translate-y-1/2 bg-primary/20 -z-0"></div>
-</div>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-white hover:text-primary text-sm transition-colors rounded hover:bg-white/5">15</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-white hover:text-primary text-sm transition-colors rounded hover:bg-white/5">16</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-white hover:text-primary text-sm transition-colors rounded hover:bg-white/5">17</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-white hover:text-primary text-sm transition-colors rounded hover:bg-white/5">18</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-white hover:text-primary text-sm transition-colors rounded hover:bg-white/5">19</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-white hover:text-primary text-sm transition-colors rounded hover:bg-white/5">20</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">21</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">22</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">23</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">24</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">25</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">26</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">27</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">28</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">29</button>
-<button class="h-10 w-10 mx-auto flex items-center justify-center text-text-gray/50 hover:text-white text-sm" disabled="">30</button>
+<div id="calendar-grid" class="grid grid-cols-7 gap-y-8 gap-x-2 text-center">
+<!-- Calendar will be dynamically generated by JavaScript -->
 </div>
 </div>
 </section>
@@ -201,7 +158,7 @@
                             </h4>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <label class="cursor-pointer group relative">
-<input checked="" class="peer amenity-checkbox sr-only" type="checkbox"/>
+<input data-amenity="private-chef" class="peer amenity-checkbox sr-only" type="checkbox"/>
 <div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
 <div class="flex items-center gap-4">
 <div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
@@ -209,22 +166,52 @@
 </div>
 <div>
 <div class="text-white font-bold text-sm uppercase">Private Chef</div>
-<div class="text-text-gray text-xs">Breakfast &amp; Dinner Service</div>
+<div class="text-text-gray text-xs">Gourmet Meal Service</div>
 </div>
 </div>
 <span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
 </div>
 </label>
 <label class="cursor-pointer group relative">
-<input class="peer amenity-checkbox sr-only" type="checkbox"/>
+<input data-amenity="private-driver" class="peer amenity-checkbox sr-only" type="checkbox"/>
 <div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
 <div class="flex items-center gap-4">
 <div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
-<span class="material-symbols-outlined text-lg">local_bar</span>
+<span class="material-symbols-outlined text-lg">local_taxi</span>
 </div>
 <div>
-<div class="text-white font-bold text-sm uppercase">Sommelier</div>
-<div class="text-text-gray text-xs">Wine Pairing Experience</div>
+<div class="text-white font-bold text-sm uppercase">Private Driver</div>
+<div class="text-text-gray text-xs">Personal Chauffeur Service</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input data-amenity="massage" class="peer amenity-checkbox sr-only" type="checkbox"/>
+<div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
+<div class="flex items-center gap-4">
+<div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
+<span class="material-symbols-outlined text-lg">spa</span>
+</div>
+<div>
+<div class="text-white font-bold text-sm uppercase">Massage</div>
+<div class="text-text-gray text-xs">In-Home Spa Treatment</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input data-amenity="mani-pedi" class="peer amenity-checkbox sr-only" type="checkbox"/>
+<div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
+<div class="flex items-center gap-4">
+<div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
+<span class="material-symbols-outlined text-lg">auto_fix_high</span>
+</div>
+<div>
+<div class="text-white font-bold text-sm uppercase">Mani-Pedi</div>
+<div class="text-text-gray text-xs">Professional Nail Care</div>
 </div>
 </div>
 <span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
@@ -234,56 +221,131 @@
 </div>
 <div class="mb-8">
 <h4 class="text-text-gray text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">flight</span> Aviation &amp; Transit
+<span class="material-symbols-outlined text-sm">self_improvement</span> Wellness &amp; Mindfulness
                             </h4>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <label class="cursor-pointer group relative">
-<input checked="" class="peer amenity-checkbox sr-only" type="checkbox"/>
+<input data-amenity="yoga" class="peer amenity-checkbox sr-only" type="checkbox"/>
+<div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
+<div class="flex items-center gap-4">
+<div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
+<span class="material-symbols-outlined text-lg">exercise</span>
+</div>
+<div>
+<div class="text-white font-bold text-sm uppercase">Yoga</div>
+<div class="text-text-gray text-xs">Private Yoga Session</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input data-amenity="meditation" class="peer amenity-checkbox sr-only" type="checkbox"/>
+<div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
+<div class="flex items-center gap-4">
+<div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
+<span class="material-symbols-outlined text-lg">relax</span>
+</div>
+<div>
+<div class="text-white font-bold text-sm uppercase">Meditation</div>
+<div class="text-text-gray text-xs">Guided Meditation Class</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input data-amenity="sound-bath" class="peer amenity-checkbox sr-only" type="checkbox"/>
+<div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
+<div class="flex items-center gap-4">
+<div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
+<span class="material-symbols-outlined text-lg">graphic_eq</span>
+</div>
+<div>
+<div class="text-white font-bold text-sm uppercase">Sound Bath</div>
+<div class="text-text-gray text-xs">Healing Sound Therapy</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input data-amenity="quantum-therapy" class="peer amenity-checkbox sr-only" type="checkbox"/>
+<div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
+<div class="flex items-center gap-4">
+<div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
+<span class="material-symbols-outlined text-lg">science</span>
+</div>
+<div>
+<div class="text-white font-bold text-sm uppercase">Quantum Therapy</div>
+<div class="text-text-gray text-xs">Energy Alignment Session</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
+</div>
+</label>
+</div>
+</div>
+<div class="mb-8">
+<h4 class="text-text-gray text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">celebration</span> Entertainment &amp; Experiences
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="cursor-pointer group relative">
+<input data-amenity="heli-tour" class="peer amenity-checkbox sr-only" type="checkbox"/>
 <div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
 <div class="flex items-center gap-4">
 <div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
 <span class="material-symbols-outlined text-lg">helicopter</span>
 </div>
 <div>
-<div class="text-white font-bold text-sm uppercase">Helipad Access</div>
-<div class="text-text-gray text-xs">Landing Clearance &amp; Valet</div>
+<div class="text-white font-bold text-sm uppercase">Heli Tour</div>
+<div class="text-text-gray text-xs">Aerial Malibu Experience</div>
 </div>
 </div>
 <span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
 </div>
 </label>
 <label class="cursor-pointer group relative">
-<input class="peer amenity-checkbox sr-only" type="checkbox"/>
+<input data-amenity="wine-tasting" class="peer amenity-checkbox sr-only" type="checkbox"/>
 <div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
 <div class="flex items-center gap-4">
 <div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
-<span class="material-symbols-outlined text-lg">airport_shuttle</span>
+<span class="material-symbols-outlined text-lg">wine_bar</span>
 </div>
 <div>
-<div class="text-white font-bold text-sm uppercase">Armored Transport</div>
-<div class="text-text-gray text-xs">LAX to Malibu Transfer</div>
+<div class="text-white font-bold text-sm uppercase">Wine Tasting</div>
+<div class="text-text-gray text-xs">Sommelier-Led Experience</div>
 </div>
 </div>
 <span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
 </div>
 </label>
-</div>
-</div>
-<div class="mb-8">
-<h4 class="text-text-gray text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">podium</span> Events
-                            </h4>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <label class="cursor-pointer group relative">
-<input class="peer amenity-checkbox sr-only" type="checkbox"/>
+<input data-amenity="live-music" class="peer amenity-checkbox sr-only" type="checkbox"/>
 <div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
 <div class="flex items-center gap-4">
 <div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
-<span class="material-symbols-outlined text-lg">speaker</span>
+<span class="material-symbols-outlined text-lg">music_note</span>
 </div>
 <div>
-<div class="text-white font-bold text-sm uppercase">Full AV Unlock</div>
-<div class="text-text-gray text-xs">Concert Grade Sound System</div>
+<div class="text-white font-bold text-sm uppercase">Live Music</div>
+<div class="text-text-gray text-xs">Private Performance</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input data-amenity="gambling-night" class="peer amenity-checkbox sr-only" type="checkbox"/>
+<div class="frosted-glass p-4 rounded border border-white/10 hover:border-white/30 transition-all flex items-center justify-between group-hover:bg-white/5">
+<div class="flex items-center gap-4">
+<div class="bg-surface-dark border border-white/10 w-10 h-10 flex items-center justify-center rounded text-white">
+<span class="material-symbols-outlined text-lg">casino</span>
+</div>
+<div>
+<div class="text-white font-bold text-sm uppercase">Gambling Night</div>
+<div class="text-text-gray text-xs">Casino-Style Entertainment</div>
 </div>
 </div>
 <span class="material-symbols-outlined text-white/0 transition-opacity check-icon">check_circle</span>
@@ -299,44 +361,15 @@
 <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10"></div>
 <div class="flex items-center justify-between mb-6 pb-6 border-b border-white/10">
 <h3 class="text-white text-lg font-bold uppercase tracking-widest">Quote Summary</h3>
-<span class="text-text-gray text-xs font-mono">REF: AV-9024</span>
+<span id="quote-reference" class="text-text-gray text-xs font-mono">REF: AV-0000</span>
 </div>
-<div class="space-y-4 mb-8">
-<div class="flex justify-between items-start">
-<div class="flex flex-col">
-<span class="text-white text-sm font-medium">Residence Stay</span>
-<span class="text-text-gray text-xs">Nov 13 - Nov 15 (2 Nights)</span>
-</div>
-<span class="text-white font-mono">$24,000</span>
-</div>
-<div class="flex justify-between items-start">
-<div class="flex flex-col">
-<span class="text-white text-sm font-medium">Private Chef</span>
-<span class="text-text-gray text-xs">Amenity Add-on</span>
-</div>
-<span class="text-white font-mono">$1,500</span>
-</div>
-<div class="flex justify-between items-start">
-<div class="flex flex-col">
-<span class="text-white text-sm font-medium">Helipad Access</span>
-<span class="text-text-gray text-xs">Amenity Add-on</span>
-</div>
-<span class="text-white font-mono">$2,500</span>
-</div>
-<div class="h-px bg-white/10 my-4"></div>
-<div class="flex justify-between items-center">
-<span class="text-text-gray text-sm uppercase tracking-wider">Subtotal</span>
-<span class="text-white font-mono">$28,000</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="text-text-gray text-sm uppercase tracking-wider">Taxes &amp; Fees (Est.)</span>
-<span class="text-white font-mono">$3,200</span>
-</div>
+<div id="quote-items" class="space-y-4 mb-8">
+<!-- Quote items will be dynamically generated by JavaScript -->
 </div>
 <div class="bg-background-dark/50 p-4 rounded border border-white/5 mb-6">
 <div class="flex justify-between items-center">
 <span class="text-white font-bold uppercase tracking-widest">Total Estimate</span>
-<span class="text-2xl text-primary font-bold font-mono">$31,200</span>
+<span id="quote-total" class="text-2xl text-primary font-bold font-mono">$0</span>
 </div>
 </div>
 <a href="book-consultation.html" class="cursor-pointer block w-full bg-primary hover:bg-red-700 text-white h-14 rounded text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-[0_0_20px_rgba(209,0,26,0.3)] text-center">
@@ -458,5 +491,5 @@
 </div>
 </div>
 </footer>
-
+<script src="booking.js"></script>
 </body></html>
