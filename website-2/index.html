@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Apel Design - The Aviator Landing</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ca0718",
+                        "background-light": "#F6F6F7",
+                        "background-dark": "#0B0B0D", // Deep Matte Black
+                        "surface-dark": "#18181A",
+                        "glass-border": "rgba(255, 255, 255, 0.1)",
+                        "glass-bg": "rgba(169, 171, 179, 0.05)",
+                        "text-secondary": "#A9ABB3",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "mono": ["Manrope", "monospace"]},
+                    borderRadius: {
+                        "DEFAULT": "0.125rem", 
+                        "lg": "0.25rem", 
+                        "xl": "0.5rem", 
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'runway-pattern': "repeating-linear-gradient(90deg, transparent, transparent 49px, #333 49px, #333 51px)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            background: #0B0B0D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ca0718;
+        }.clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }.glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-panel:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden selection:bg-primary selection:text-white">
+<nav class="fixed top-0 z-50 w-full border-b border-white/10 bg-[#0B0B0D]/90 backdrop-blur-md transition-all duration-300">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between">
+<a href="index.html" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">flight_takeoff</span>
+<div>
+<h1 class="text-xl font-bold uppercase tracking-widest leading-none">Apel Design</h1>
+<span class="text-[10px] text-text-secondary uppercase tracking-[0.2em]">Architecture</span>
+</div>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#">Residence</a>
+<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#">Gallery</a>
+<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#">Specs</a>
+<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="about.html">About Us</a>
+<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center h-10 px-6 border border-white/20 hover:border-white text-sm font-bold uppercase tracking-wide transition-all rounded hover:bg-white/5">
+                        Log In
+                    </button>
+<a href="book-stay.html" class="flex items-center justify-center h-10 px-6 bg-primary hover:bg-red-700 text-white text-sm font-bold uppercase tracking-wide transition-all rounded shadow-[0_0_15px_rgba(202,7,24,0.3)] hover:shadow-[0_0_25px_rgba(202,7,24,0.5)]">
+                        Request Booking
+                    </a>
+</div>
+</div>
+</div>
+<div class="h-[2px] w-full bg-white/5">
+<div class="h-full w-1/4 bg-primary"></div>
+</div>
+</nav>
+<header class="relative h-screen min-h-[700px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="The Aviator residence exterior at dusk with warm interior lighting" class="h-full w-full object-cover brightness-[0.6] contrast-[1.1]" data-alt="Modern luxury house exterior at twilight with glowing windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3SXBnd1EGvnyEHIigVeqFMc-L_KRE__8W0y1sor-LgymoWaPYz8SoqiBtyo3GcGyujBXAJtOFG0hzfznvIDx3re0UeThPCnAJVxJ3Dcd-bt02A8Nhz2In4tgXXERR6Cj6KO2SEFRDgmqE1dhG5Hl8WTARylhgHqW7qIKON1EQpd9QbeGRU5rCu-ks1D7tqMEA9SxS-qctmnegS-q7nhL02AR0pNkRnqSTxgJ47mNrN-9OUaVDtyCpHsahP-drAcuf55u72Vi-akLh"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#0B0B0D]"></div>
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
+</div>
+<div class="relative z-10 container mx-auto px-4 pt-20 text-center">
+<div class="inline-flex items-center gap-2 border border-white/20 bg-black/40 backdrop-blur-sm px-4 py-1.5 rounded-full mb-8 animate-fade-in-up">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-semibold tracking-widest uppercase text-white/90">Exclusive Listing</span>
+</div>
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-black text-white uppercase tracking-tighter mb-4 leading-none drop-shadow-2xl">
+                The Aviator
+            </h1>
+<p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light tracking-wide">
+                Luxury architectural residence by Apel Design. A masterpiece of aviation-inspired engineering and monolith design.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a href="book-stay.html" class="w-full sm:w-auto min-w-[200px] h-14 bg-primary hover:bg-red-700 text-white font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2 rounded transition-all hover:-translate-y-1 hover:shadow-lg">
+<span>Request Booking</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<button class="w-full sm:w-auto min-w-[200px] h-14 border border-white/30 hover:border-white hover:bg-white/5 text-white font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2 rounded transition-all backdrop-blur-sm">
+<span>Schedule Call</span>
+<span class="material-symbols-outlined text-lg">call</span>
+</button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white/50 text-4xl">keyboard_arrow_down</span>
+</div>
+</header>
+<section class="relative z-20 -mt-20 mx-4 md:mx-auto max-w-6xl">
+<div class="glass-panel rounded-lg p-6 md:p-8 flex flex-wrap justify-between items-center gap-6 shadow-2xl bg-[#0B0B0D]/80">
+<div class="flex flex-col gap-1 pr-8 border-r border-white/10 last:border-0 flex-1 min-w-[120px]">
+<span class="text-xs text-text-secondary uppercase tracking-widest">Bedrooms</span>
+<span class="text-3xl font-mono font-bold text-white">05</span>
+</div>
+<div class="flex flex-col gap-1 pr-8 border-r border-white/10 last:border-0 flex-1 min-w-[120px]">
+<span class="text-xs text-text-secondary uppercase tracking-widest">Bathrooms</span>
+<span class="text-3xl font-mono font-bold text-white">06</span>
+</div>
+<div class="flex flex-col gap-1 pr-8 border-r border-white/10 last:border-0 flex-1 min-w-[120px]">
+<span class="text-xs text-text-secondary uppercase tracking-widest">Total Area</span>
+<span class="text-3xl font-mono font-bold text-white">8,500 <span class="text-base text-gray-500 font-normal">Sq Ft</span></span>
+</div>
+<div class="flex flex-col gap-1 flex-1 min-w-[120px]">
+<span class="text-xs text-text-secondary uppercase tracking-widest">Coordinates</span>
+<span class="text-xl font-bold text-white flex items-center gap-2">
+                    Malibu, CA
+                    <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+</span>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-dark relative overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[1px] border-l border-dashed border-white/5"></div>
+<div class="absolute top-0 left-1/4 h-full w-[1px] border-l border-dashed border-white/5 opacity-50"></div>
+<div class="absolute top-0 right-1/4 h-full w-[1px] border-l border-dashed border-white/5 opacity-50"></div>
+<div class="container mx-auto px-4 relative z-10">
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
+<div>
+<h2 class="text-primary text-sm font-bold tracking-[0.2em] mb-2 uppercase">Architectural Avionics</h2>
+<h3 class="text-4xl md:text-5xl font-bold text-white uppercase tracking-tight">Property Highlights</h3>
+</div>
+<p class="text-text-secondary max-w-md text-sm leading-relaxed">
+                    Designed with the precision of aerospace engineering and the elegance of modern luxury. Every detail is calibrated for performance and aesthetic purity.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+<div class="glass-panel p-6 rounded flex flex-col gap-4 group transition-all duration-300 hover:-translate-y-2">
+<div class="w-12 h-12 rounded bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">sensor_door</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-2 leading-tight">Hangar Door</h4>
+<p class="text-sm text-text-secondary">Panoramic floor-to-ceiling glass wall opening to the Pacific.</p>
+</div>
+</div>
+<div class="glass-panel p-6 rounded flex flex-col gap-4 group transition-all duration-300 hover:-translate-y-2">
+<div class="w-12 h-12 rounded bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">pool</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-2 leading-tight">Infinity Pool</h4>
+<p class="text-sm text-text-secondary">Zero-edge pool merging seamlessly with the horizon line.</p>
+</div>
+</div>
+<div class="glass-panel p-6 rounded flex flex-col gap-4 group transition-all duration-300 hover:-translate-y-2">
+<div class="w-12 h-12 rounded bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">home_iot_device</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-2 leading-tight">Smart Avionics</h4>
+<p class="text-sm text-text-secondary">Fully integrated environmental &amp; lighting control systems.</p>
+</div>
+</div>
+<div class="glass-panel p-6 rounded flex flex-col gap-4 group transition-all duration-300 hover:-translate-y-2">
+<div class="w-12 h-12 rounded bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">texture</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-2 leading-tight">Monolith Facade</h4>
+<p class="text-sm text-text-secondary">Matte black composite panels with high thermal efficiency.</p>
+</div>
+</div>
+<div class="glass-panel p-6 rounded flex flex-col gap-4 group transition-all duration-300 hover:-translate-y-2">
+<div class="w-12 h-12 rounded bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">flight_land</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-2 leading-tight">Private Helipad</h4>
+<p class="text-sm text-text-secondary">Direct access for private aviation arrivals and departures.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#111113] clip-diagonal pb-40">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-6">
+<h3 class="text-4xl font-bold text-white uppercase tracking-tight">Visual Manifest</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-primary text-white">All</button>
+<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all">Exterior</button>
+<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all">Interior</button>
+<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all">Views</button>
+<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all">Details</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[300px]">
+<div class="lg:col-span-2 lg:row-span-2 group relative overflow-hidden rounded cursor-pointer">
+<img alt="Expansive living room with floor to ceiling windows overlooking ocean" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" data-alt="Modern living room with ocean view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL5jaCXVyPRgspOZZPEIj8WXk4QJu-i_E2AygBI0M9OS6K1_Gd6Y6q5V6jIIp4k-5XfjjDBjRy2yTOjZf5S17a6twUDDxFJPPS7AFyBuBWedbejYXRTITDgS2L4f0YbJsZw6c2axK8cSBwsTAbSY2XVjOJJsE0FdudFck6XVNpa84CA_V1II-V7gVisXOiCc0m6vE8PKckqIet8bBn0RmU-t5VruCy838KG49dbrdAusld2bej6bU6uv_D2xsTJ278uYEUjd74OclE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Interior</span>
+<h4 class="text-2xl font-bold text-white">Main Hangar Living</h4>
+</div>
+</div>
+<div class="lg:row-span-2 group relative overflow-hidden rounded cursor-pointer">
+<img alt="Vertical shot of modern staircase with industrial design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" data-alt="Modern staircase design detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVhS30PEkpZBzYiy-01T3NNsDUU7BxsGhFxMObbM2nViuF0GagyDeEJLKjvwqZ2JTcfaQEyHSNUrBVxiHJyMDbWkUsay7D2JARzzXRD_Oiy0MNHULc-p2WKxlvdp767uU1VJuKTNxX2YKCWETbRs0VN_JGGNaK3g5mlnY3glx7RdMiu-xGU5F7TvvZII1Q50CQHqB--DhUpI5tj5dqJIgmhyZST2OPix9C7QDFmPx5jkThizQURZ4ti3CHdh5y_yM2kl91sZidioYn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Details</span>
+<h4 class="text-2xl font-bold text-white">Vertical Ascent</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded cursor-pointer">
+<img alt="Modern kitchen with black marble island" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" data-alt="Minimalist luxury kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKsNlum-D8FEcs7x6VHpYz_O1IZBlPoZ4HjY9WpAUaPhw2omnXnMjCRvDWc_Lf7kHIuOJEqetk-LfbBX1MeQhiycabbZ1_mgreZoTwMOg-tIexD5oxZnNKFKHwH3kiGtSJ6TA52PCmD__u5h6lD7JCL0JptnwjyFzrR_taeTRS8DK4--YUYUWaoUJyrKNoUJ_sUPm35P5CtiVILW_Bs65pjimmU4V5loEdUgwH0tdEzmsnkfvDPIiX15MOfygFdxPoJjJYLK9d1YFA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Kitchen</span>
+<h4 class="text-lg font-bold text-white">Culinary Command</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded cursor-pointer">
+<img alt="Outdoor patio area with firepit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" data-alt="Patio lounge area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1q0GnW2oyCrgeuNskthVrCRkMXsLI3synQi73CSurxT3tMrWsiuT2V-QkEaT0JrLj0Zxt4yBgH7smV5U8CdDzFmu7TStNvVl-RWY6JJOFcHL7uAs1OOSKjAGRjZN0R3crv0UvVOqaU59zpRwnhlZhMkNJ9SitZmS28Cr4ROXOEwOOANI-8VvJ_ejAOFtnMd1RhKqmrxx-ft-OuOWSoeY19KXbYb5qCjvyGEl3vTVyEOkQXaGyYEPmZIyckaBC71a6Q0mxQm4CARha"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Exterior</span>
+<h4 class="text-lg font-bold text-white">Observation Deck</h4>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white border-b-2 border-primary pb-1 hover:text-primary transition-colors">
+                    View Full Manifest <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-dark -mt-20 pt-32">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="flex-1">
+<h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                        Technical Specs
+                    </h3>
+<div class="flex flex-col divide-y divide-white/10 border border-white/10 rounded bg-[#111113]">
+<div class="flex justify-between p-4 hover:bg-white/5 transition-colors">
+<span class="text-text-secondary text-sm font-medium">Lot Size</span>
+<span class="text-white text-sm font-mono font-bold">2.5 Acres</span>
+</div>
+<div class="flex justify-between p-4 hover:bg-white/5 transition-colors">
+<span class="text-text-secondary text-sm font-medium">Year Built</span>
+<span class="text-white text-sm font-mono font-bold">2024</span>
+</div>
+<div class="flex justify-between p-4 hover:bg-white/5 transition-colors">
+<span class="text-text-secondary text-sm font-medium">Architect</span>
+<span class="text-white text-sm font-mono font-bold">Apel Studio X</span>
+</div>
+<div class="flex justify-between p-4 hover:bg-white/5 transition-colors">
+<span class="text-text-secondary text-sm font-medium">Materials</span>
+<span class="text-white text-sm font-mono font-bold text-right">Steel, Concrete, Glass</span>
+</div>
+<div class="flex justify-between p-4 hover:bg-white/5 transition-colors">
+<span class="text-text-secondary text-sm font-medium">Parking</span>
+<span class="text-white text-sm font-mono font-bold">12 Vehicles + Helipad</span>
+</div>
+<div class="flex justify-between p-4 hover:bg-white/5 transition-colors">
+<span class="text-text-secondary text-sm font-medium">HVAC</span>
+<span class="text-white text-sm font-mono font-bold">Hospital Grade HEPA</span>
+</div>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">star</span>
+                        Amenities Class
+                    </h3>
+<div class="flex flex-wrap gap-3">
+<div class="px-4 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-2 hover:border-primary/50 transition-colors cursor-default">
+<span class="material-symbols-outlined text-xs">wine_bar</span> Wine Cellar
+                        </div>
+<div class="px-4 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-2 hover:border-primary/50 transition-colors cursor-default">
+<span class="material-symbols-outlined text-xs">theaters</span> Home Theater
+                        </div>
+<div class="px-4 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-2 hover:border-primary/50 transition-colors cursor-default">
+<span class="material-symbols-outlined text-xs">spa</span> Wellness Spa
+                        </div>
+<div class="px-4 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-2 hover:border-primary/50 transition-colors cursor-default">
+<span class="material-symbols-outlined text-xs">fitness_center</span> Gym
+                        </div>
+<div class="px-4 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-2 hover:border-primary/50 transition-colors cursor-default">
+<span class="material-symbols-outlined text-xs">local_library</span> Library
+                        </div>
+<div class="px-4 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-2 hover:border-primary/50 transition-colors cursor-default">
+<span class="material-symbols-outlined text-xs">security</span> 24/7 Security
+                        </div>
+<div class="px-4 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-2 hover:border-primary/50 transition-colors cursor-default">
+<span class="material-symbols-outlined text-xs">ev_station</span> EV Charging
+                        </div>
+<div class="px-4 py-3 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 flex items-center gap-2 hover:border-primary/50 transition-colors cursor-default">
+<span class="material-symbols-outlined text-xs">router</span> Gigabit Fiber
+                        </div>
+</div>
+<div class="mt-12">
+<h4 class="text-sm font-bold text-text-secondary uppercase tracking-widest mb-6">Featured In</h4>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<div class="min-w-[200px] bg-[#18181A] p-4 rounded border border-white/5 hover:border-white/20 transition-all group cursor-pointer">
+<div class="h-8 mb-3 opacity-50 group-hover:opacity-100 transition-opacity">
+<div class="text-lg font-black italic font-serif text-white">ARCH. DIGEST</div>
+</div>
+<p class="text-xs text-text-secondary line-clamp-2 group-hover:text-white transition-colors">"The Aviator redefines what it means to live in the clouds."</p>
+<div class="mt-3 flex items-center text-primary text-xs font-bold uppercase tracking-wider">
+                                    Read <span class="material-symbols-outlined text-[10px] ml-1">arrow_outward</span>
+</div>
+</div>
+<div class="min-w-[200px] bg-[#18181A] p-4 rounded border border-white/5 hover:border-white/20 transition-all group cursor-pointer">
+<div class="h-8 mb-3 opacity-50 group-hover:opacity-100 transition-opacity">
+<div class="text-lg font-bold tracking-tighter text-white">DWELL</div>
+</div>
+<p class="text-xs text-text-secondary line-clamp-2 group-hover:text-white transition-colors">"A monolithic masterpiece that feels ready for takeoff."</p>
+<div class="mt-3 flex items-center text-primary text-xs font-bold uppercase tracking-wider">
+                                    Read <span class="material-symbols-outlined text-[10px] ml-1">arrow_outward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#111113] relative">
+<div class="container mx-auto px-4">
+<div class="mb-10 text-center">
+<h3 class="text-3xl font-bold text-white uppercase tracking-tight">Coordinates</h3>
+<p class="text-text-secondary mt-2">Prime positioning with ultimate privacy.</p>
+</div>
+<div class="bg-[#18181A] rounded-xl overflow-hidden border border-white/10 flex flex-col md:flex-row h-[500px]">
+<div class="flex-grow relative bg-gray-800">
+<img alt="Map view of Malibu coastline" class="w-full h-full object-cover grayscale opacity-60 hover:opacity-80 transition-opacity" data-location="Malibu, CA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbZvVxcOtmA9AmRa-g91xHekx_b_d45SUwGg7T7lq2ku9f4Huf5EHQtsezu8S5ZMOp83V7pkjDiYlSXHHBeR33ei97ZXLCfxrJjp9K32EPzA-VU9j7qqxXvnOqKC8180rkoo87813TEFtYwp5XzjIAdlth46TgzMjW8LHS1076yRUk74kqhuoXFCWZ4d5z0urMCUXU0aki9Zqr-etwdTjmokCmBOZNrfhmAmpn3K_03YSUdikP2NV_uQIjlfF-TbAbN9bpNkPHkeSI"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+<div class="w-4 h-4 rounded-full bg-primary shadow-[0_0_20px_#ca0718]"></div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-[350px] p-8 flex flex-col justify-center bg-[#111113] border-l border-white/10">
+<h4 class="text-xl font-bold text-white mb-6">Malibu, CA</h4>
+<ul class="space-y-6">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">flight</span>
+<div>
+<span class="block text-white font-bold">LAX International</span>
+<span class="text-sm text-text-secondary">45 min drive</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">waves</span>
+<div>
+<span class="block text-white font-bold">Private Beach Access</span>
+<span class="text-sm text-text-secondary">Direct stairway</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">shopping_bag</span>
+<div>
+<span class="block text-white font-bold">Malibu Country Mart</span>
+<span class="text-sm text-text-secondary">10 min drive</span>
+</div>
+</li>
+</ul>
+<button class="mt-8 w-full py-3 border border-white/20 text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors rounded">
+                        Get Directions
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-background-dark border-t border-white/10 pt-20 pb-10">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row gap-12 mb-16">
+<div class="flex-1">
+<h2 class="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter mb-6">
+                        Ready for<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-red-500">Takeoff?</span>
+</h2>
+<p class="text-gray-400 max-w-md mb-8">
+                        Schedule a private viewing of The Aviator. Serious inquiries only for this exclusive listing.
+                    </p>
+<div class="flex gap-4">
+<a href="book-stay.html" class="h-12 px-8 bg-primary hover:bg-red-700 text-white font-bold uppercase tracking-widest text-sm rounded transition-all shadow-lg shadow-primary/20 flex items-center justify-center">
+                            Request Booking
+                        </a>
+<button class="h-12 px-8 border border-white/20 hover:border-white text-white font-bold uppercase tracking-widest text-sm rounded transition-all">
+                            Download Brochure
+                        </button>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="bg-[#18181A] p-6 rounded border border-white/5 flex flex-col items-center text-center hover:border-white/20 transition-all">
+<div class="w-20 h-20 rounded-full bg-gray-700 mb-4 overflow-hidden border-2 border-white/10">
+<img alt="Portrait of lead real estate agent Vittal" class="w-full h-full object-cover" data-alt="Agent Vittal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCofrcmmefGpYEf42gSLfOntfxGHYJmatJzJ-4dMdJvGpOgZO_3qN_WdP04j3RRLN4TVZhbGEVaaNXgfMYZgRWx6A0_-pdlNeZznHhCCVSkyo8zPhKRi4nGrD63YyOLuaIyINrR4-3mKaT9K5nCqULb0wrXLjvZa2bvxIy2t7Ixk8Cue-OJFPVew90X94zqEEhnzGZp5H8zWdGPBQ1HcD3or0yS0xSVVCjtl41KEgcOovtkM-d0C62qHSsZ-GYprm4sx1Tdmeuy9b3N"/>
+</div>
+<h4 class="text-white font-bold text-lg">Vittal Design</h4>
+<span class="text-primary text-xs uppercase tracking-widest mb-4">Lead Architect Agent</span>
+<div class="flex gap-2 w-full">
+<button class="flex-1 py-2 bg-white/5 rounded hover:bg-white/10 text-white text-xs font-bold uppercase transition-colors">Call</button>
+<button class="flex-1 py-2 bg-white/5 rounded hover:bg-white/10 text-white text-xs font-bold uppercase transition-colors">Email</button>
+</div>
+</div>
+<div class="bg-[#18181A] p-6 rounded border border-white/5 flex flex-col items-center text-center hover:border-white/20 transition-all">
+<div class="w-20 h-20 rounded-full bg-black mb-4 flex items-center justify-center border-2 border-white/10">
+<span class="material-symbols-outlined text-3xl text-white">apartment</span>
+</div>
+<h4 class="text-white font-bold text-lg">Apel Design HQ</h4>
+<span class="text-primary text-xs uppercase tracking-widest mb-4">Global Office</span>
+<div class="flex gap-2 w-full">
+<button class="flex-1 py-2 bg-white/5 rounded hover:bg-white/10 text-white text-xs font-bold uppercase transition-colors">Contact</button>
+<button class="flex-1 py-2 bg-white/5 rounded hover:bg-white/10 text-white text-xs font-bold uppercase transition-colors">Visit</button>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 opacity-50">
+<span class="material-symbols-outlined text-xl">flight_takeoff</span>
+<span class="text-sm font-bold uppercase tracking-widest">Apel Design</span>
+</div>
+<div class="flex gap-6 text-xs text-gray-500 uppercase tracking-wider">
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+<a class="hover:text-white transition-colors" href="#">Terms</a>
+<a class="hover:text-white transition-colors" href="#">Sitemap</a>
+</div>
+<p class="text-xs text-gray-600">© 2024 Apel Design. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

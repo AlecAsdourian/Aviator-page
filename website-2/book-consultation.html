@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Apel Design - Book Consultation</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ca0718",
+                        "accent-red": "#D1001A",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#0B0B0D", // Deep black from prompt
+                        "surface-dark": "#18181b", // Slightly lighter for monolith
+                        "glass-dark": "rgba(30, 30, 35, 0.6)", // Frosted glass base
+                        "text-main": "#F6F6F7",
+                        "text-muted": "#A9ABB3",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "2px", // Sharp, technical feel
+                        "sm": "1px",
+                        "md": "4px",
+                        "lg": "6px", 
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'runway-pattern': "repeating-linear-gradient(45deg, #18181b 0, #18181b 1px, transparent 0, transparent 50%)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for technical feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0B0D; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ca0718; 
+        }
+        
+        .glass-panel {
+            background: rgba(20, 20, 22, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .monolith-panel {
+            background: #151517;
+            border: 1px solid #2a2a2d;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Diagonal cut effect for the background decor */
+        .diagonal-slice {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-text-main font-display antialiased min-h-screen flex flex-col overflow-x-hidden selection:bg-primary selection:text-white">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0B0B0D]/90 backdrop-blur-md">
+<div class="px-6 lg:px-12 flex h-20 items-center justify-between">
+<a href="index.html" class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[0.1em] uppercase">Apel Design</h2>
+</a>
+<nav class="hidden md:flex flex-1 justify-end gap-10 mr-12">
+<a class="text-text-muted hover:text-white text-xs font-semibold uppercase tracking-widest transition-colors" href="#">Properties</a>
+<a class="text-text-muted hover:text-white text-xs font-semibold uppercase tracking-widest transition-colors" href="#">Architecture</a>
+<a class="text-text-muted hover:text-white text-xs font-semibold uppercase tracking-widest transition-colors" href="#">The Fleet</a>
+<a class="text-text-muted hover:text-white text-xs font-semibold uppercase tracking-widest transition-colors" href="#">Journal</a>
+</nav>
+<button class="hidden md:flex h-10 px-6 cursor-pointer items-center justify-center bg-primary hover:bg-red-700 transition-colors text-white text-xs font-bold uppercase tracking-widest clip-path-slant">
+<span>Contact</span>
+</button>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="relative flex-grow flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto p-0 lg:p-12 gap-8 lg:gap-0">
+<!-- Background Decor: Diagonal lines/Runway feel -->
+<div class="absolute inset-0 pointer-events-none z-0 opacity-20">
+<div class="absolute top-0 right-0 w-1/2 h-full border-l border-dashed border-white/10 transform -skew-x-12 origin-top"></div>
+<div class="absolute bottom-0 left-20 w-px h-96 bg-gradient-to-t from-primary/50 to-transparent"></div>
+</div>
+<!-- Left Column: The Monolith (Calendar & Schedule) -->
+<div class="relative z-10 w-full lg:w-5/12 flex flex-col gap-6 px-6 lg:px-0 lg:pr-12 border-r-0 lg:border-r border-white/5">
+<!-- Page Heading -->
+<div class="flex flex-col gap-2 pt-8 lg:pt-0 pb-6">
+<div class="flex items-center gap-2 text-primary mb-1">
+<span class="material-symbols-outlined text-sm">label_important</span>
+<span class="text-xs font-bold tracking-widest uppercase">Step 01</span>
+</div>
+<h1 class="text-white text-4xl lg:text-5xl font-black leading-none tracking-[-0.02em] uppercase">
+                    Flight Plan:<br/><span class="text-text-muted">Consultation</span>
+</h1>
+<p class="text-text-muted text-sm mt-2 max-w-md leading-relaxed border-l-2 border-primary pl-4">
+                    Secure your vector. Select a date and time for your private architectural briefing. All times are synchronized with Agent availability.
+                </p>
+</div>
+<!-- Monolith: Calendar -->
+<div class="monolith-panel p-6 rounded-sm">
+<div class="flex items-center justify-between mb-6 border-b border-white/5 pb-4">
+<button class="hover:bg-white/5 rounded-sm p-1 transition-colors">
+<span class="material-symbols-outlined text-text-muted">chevron_left</span>
+</button>
+<p class="text-white text-sm font-bold tracking-[0.1em] uppercase">September 2023</p>
+<button class="hover:bg-white/5 rounded-sm p-1 transition-colors">
+<span class="material-symbols-outlined text-text-muted">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-y-2 mb-2">
+<!-- Weekdays -->
+<div class="text-text-muted text-[10px] font-bold uppercase tracking-widest text-center py-2">S</div>
+<div class="text-text-muted text-[10px] font-bold uppercase tracking-widest text-center py-2">M</div>
+<div class="text-text-muted text-[10px] font-bold uppercase tracking-widest text-center py-2">T</div>
+<div class="text-text-muted text-[10px] font-bold uppercase tracking-widest text-center py-2">W</div>
+<div class="text-text-muted text-[10px] font-bold uppercase tracking-widest text-center py-2">T</div>
+<div class="text-text-muted text-[10px] font-bold uppercase tracking-widest text-center py-2">F</div>
+<div class="text-text-muted text-[10px] font-bold uppercase tracking-widest text-center py-2">S</div>
+<!-- Days (Sample) -->
+<button class="h-10 w-full text-text-muted text-sm hover:text-white transition-colors relative group">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent group-hover:border-white/20">28</span>
+</button>
+<button class="h-10 w-full text-text-muted text-sm hover:text-white transition-colors relative group">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent group-hover:border-white/20">29</span>
+</button>
+<button class="h-10 w-full text-text-muted text-sm hover:text-white transition-colors relative group">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent group-hover:border-white/20">30</span>
+</button>
+<button class="h-10 w-full text-text-muted text-sm hover:text-white transition-colors relative group">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent group-hover:border-white/20">31</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<!-- Inactive style -->
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent bg-white/5">1</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent bg-white/5">2</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent bg-white/5">3</span>
+</button>
+<!-- Row 2 -->
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent bg-white/5">4</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<!-- Active / Selected State -->
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm bg-primary shadow-[0_0_15px_rgba(202,7,24,0.5)]">5</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent bg-white/5">6</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent bg-white/5">7</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent bg-white/5">8</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent bg-white/5">9</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-bold relative">
+<span class="absolute inset-0 m-auto size-8 flex items-center justify-center rounded-sm border border-transparent bg-white/5">10</span>
+</button>
+</div>
+</div>
+<!-- Time Selection: Runway Style -->
+<div class="flex flex-col gap-4 mt-2">
+<h3 class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+                    Select Vector Time
+                </h3>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+<button class="group flex items-center justify-center h-10 border border-white/10 bg-transparent hover:border-primary hover:bg-primary/10 transition-all rounded-sm">
+<span class="text-xs font-medium text-text-muted group-hover:text-white">09:00</span>
+</button>
+<button class="group flex items-center justify-center h-10 border border-white/10 bg-transparent hover:border-primary hover:bg-primary/10 transition-all rounded-sm">
+<span class="text-xs font-medium text-text-muted group-hover:text-white">10:30</span>
+</button>
+<button class="group flex items-center justify-center h-10 border border-white/10 bg-transparent hover:border-primary hover:bg-primary/10 transition-all rounded-sm">
+<span class="text-xs font-medium text-text-muted group-hover:text-white">11:00</span>
+</button>
+<button class="group flex items-center justify-center h-10 border border-primary bg-primary/20 transition-all rounded-sm shadow-[0_0_10px_rgba(202,7,24,0.2)]">
+<span class="text-xs font-bold text-white">13:00</span>
+</button>
+<button class="group flex items-center justify-center h-10 border border-white/10 bg-transparent hover:border-primary hover:bg-primary/10 transition-all rounded-sm">
+<span class="text-xs font-medium text-text-muted group-hover:text-white">14:30</span>
+</button>
+<button class="group flex items-center justify-center h-10 border border-white/10 bg-transparent hover:border-primary hover:bg-primary/10 transition-all rounded-sm">
+<span class="text-xs font-medium text-text-muted group-hover:text-white">15:00</span>
+</button>
+<button class="group flex items-center justify-center h-10 border border-white/10 bg-transparent hover:border-primary hover:bg-primary/10 transition-all rounded-sm">
+<span class="text-xs font-medium text-text-muted group-hover:text-white">16:30</span>
+</button>
+<button class="group flex items-center justify-center h-10 border border-white/10 bg-transparent hover:border-primary hover:bg-primary/10 transition-all rounded-sm opacity-50 cursor-not-allowed">
+<span class="text-xs font-medium text-text-muted line-through">17:00</span>
+</button>
+</div>
+</div>
+<!-- Agent Status -->
+<div class="mt-auto py-4 border-t border-dashed border-white/10 flex items-center gap-3">
+<div class="relative">
+<div class="size-10 rounded bg-gray-800 overflow-hidden border border-white/10">
+<img alt="Portrait of the lead architect agent in a suit" class="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFVFDCnCS2SiTfrQpEjPTlo_7g2fE3w7S1VYpOoeIkYLZqj747tDHx8pDhrn9s7DbIk0IODTBOCsId233GsgOjaqWkPoCRaUIedOqtW_kNmaq-Ls4r6kGldByOHpDsmaTHjlCVOUOoWEw6ZgAnKRW7CzhmaOS8dO9zpq5ksPl8eRiH5e7rn-XtULrjOY0BMv2UchyrXxnCVqifOBodlLAnS4aTbjjUm0tAk5s_SkH8tPcS9Jex_hKSrONF4AejGFWKUrmSgXzKimI3"/>
+</div>
+<div class="absolute -bottom-1 -right-1 size-3 bg-green-500 border-2 border-[#0B0B0D] rounded-full"></div>
+</div>
+<div>
+<p class="text-white text-xs font-bold uppercase tracking-wider">Agent: J. Reynolds</p>
+<p class="text-text-muted text-[10px]">Calendar Synced • Online</p>
+</div>
+</div>
+</div>
+<!-- Right Column: The Form (Frosted Glass) -->
+<div class="relative z-10 w-full lg:w-7/12 flex flex-col px-6 lg:pl-12 py-8 lg:py-0">
+<div class="glass-panel w-full h-full flex flex-col p-8 lg:p-12 rounded-sm relative overflow-hidden">
+<!-- Decorative scan line -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50"></div>
+<div class="flex items-center gap-2 text-primary mb-8">
+<span class="material-symbols-outlined text-sm">edit_document</span>
+<span class="text-xs font-bold tracking-widest uppercase">Step 02: Passenger Manifest</span>
+</div>
+<form class="flex flex-col gap-8 flex-grow">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="group">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-text-muted mb-2 group-focus-within:text-primary transition-colors">First Name</label>
+<input class="w-full bg-white/5 border border-white/10 focus:border-primary focus:ring-0 focus:bg-white/10 text-white text-sm font-medium h-12 px-4 rounded-sm transition-all" placeholder="Enter first name" type="text"/>
+</div>
+<div class="group">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-text-muted mb-2 group-focus-within:text-primary transition-colors">Last Name</label>
+<input class="w-full bg-white/5 border border-white/10 focus:border-primary focus:ring-0 focus:bg-white/10 text-white text-sm font-medium h-12 px-4 rounded-sm transition-all" placeholder="Enter last name" type="text"/>
+</div>
+</div>
+<div class="group">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-text-muted mb-2 group-focus-within:text-primary transition-colors">Email Address</label>
+<div class="relative">
+<input class="w-full bg-white/5 border border-white/10 focus:border-primary focus:ring-0 focus:bg-white/10 text-white text-sm font-medium h-12 pl-10 pr-4 rounded-sm transition-all" placeholder="name@company.com" type="email"/>
+<span class="material-symbols-outlined absolute left-3 top-3.5 text-text-muted text-lg pointer-events-none">mail</span>
+</div>
+</div>
+<div class="group">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-text-muted mb-2 group-focus-within:text-primary transition-colors">Phone Number <span class="text-white/20 ml-1 normal-case tracking-normal">(Optional)</span></label>
+<div class="relative">
+<input class="w-full bg-white/5 border border-white/10 focus:border-primary focus:ring-0 focus:bg-white/10 text-white text-sm font-medium h-12 pl-10 pr-4 rounded-sm transition-all" placeholder="+1 (555) 000-0000" type="tel"/>
+<span class="material-symbols-outlined absolute left-3 top-3.5 text-text-muted text-lg pointer-events-none">call</span>
+</div>
+</div>
+<div class="group">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-text-muted mb-2 group-focus-within:text-primary transition-colors">Additional Briefing</label>
+<textarea class="w-full bg-white/5 border border-white/10 focus:border-primary focus:ring-0 focus:bg-white/10 text-white text-sm font-medium min-h-[120px] p-4 rounded-sm transition-all resize-none" placeholder="Share details about your property or project requirements..."></textarea>
+</div>
+<!-- Summary & Submit -->
+<div class="mt-auto pt-8 border-t border-white/10 flex flex-col gap-4">
+<div class="flex items-center justify-between text-xs text-text-muted">
+<span class="uppercase tracking-widest">Selected Slot:</span>
+<span class="text-white font-bold bg-white/10 px-2 py-1 rounded-sm">Sep 5 • 13:00</span>
+</div>
+<button class="group relative w-full h-14 bg-primary hover:bg-red-700 transition-all duration-300 flex items-center justify-between px-6 overflow-hidden rounded-sm" type="button">
+<div class="absolute inset-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.2)_50%,transparent_75%)] bg-[length:250%_250%,100%_100%] bg-[position:-100%_0] group-hover:bg-[position:200%_0] transition-[background-position] duration-[1500ms] ease-in-out"></div>
+<span class="relative text-white font-bold uppercase tracking-[0.15em] z-10">Confirm Booking</span>
+<span class="relative material-symbols-outlined text-white z-10 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<!-- System Indicators -->
+<div class="flex items-center gap-4 justify-center mt-2 opacity-60">
+<div class="flex items-center gap-1.5" title="Confirmation email will be sent">
+<span class="material-symbols-outlined text-[10px] text-text-muted">mark_email_read</span>
+<span class="text-[10px] text-text-muted uppercase tracking-wider">Email Conf.</span>
+</div>
+<div class="w-px h-3 bg-white/20"></div>
+<div class="flex items-center gap-1.5" title="Google Meet link will be generated">
+<span class="material-symbols-outlined text-[10px] text-text-muted">video_camera_front</span>
+<span class="text-[10px] text-text-muted uppercase tracking-wider">Meet Link</span>
+</div>
+<div class="w-px h-3 bg-white/20"></div>
+<div class="flex items-center gap-1.5" title="Event synced to Google Calendar">
+<span class="material-symbols-outlined text-[10px] text-text-muted">sync</span>
+<span class="text-[10px] text-text-muted uppercase tracking-wider">G-Cal Sync</span>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Simple footer -->
+<footer class="w-full border-t border-white/5 py-8 mt-12 bg-[#0B0B0D]">
+<div class="max-w-[1600px] mx-auto px-12 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] text-text-muted uppercase tracking-widest">© 2024 Apel Design. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-[10px] text-text-muted hover:text-white uppercase tracking-widest" href="#">Privacy</a>
+<a class="text-[10px] text-text-muted hover:text-white uppercase tracking-widest" href="#">Terms</a>
+<a class="text-[10px] text-text-muted hover:text-white uppercase tracking-widest" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+<!-- Background Pattern Image (Abstract map for aviation theme context) -->
+<div class="fixed inset-0 z-[-1] opacity-[0.03] pointer-events-none" data-alt="Abstract dark aerial view of city lights resembling a map or runway layout" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFFu64nIvILtiwuxX6fpTNjAXybIl0q2LkS7DKvPPHzkViYbSL9WGIDDWwOc1up58CPiFNTimxfkmQzfBZqR8vAdQ5aqV9MG6gnPjbAe7GvYzCDvpgFB3k9Wgn4Z-Lf0TTMvQzHyhjWMRXwJMwYBrNNtoB3iGecNcA3I-LCEKidbXOQk9x8MPhdw-JUlOdilDAoJ5-HECfXoShfQUfsSUXbfgZJdToaZSnaS0rgneOzNN_P4Qd_ZnoXpDXFyOpynL0brrc3LWyDF58'); background-size: cover; background-position: center;"></div>
+</body></html>

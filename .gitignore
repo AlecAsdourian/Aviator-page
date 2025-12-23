@@ -1,0 +1,9 @@
+# Claude Code
+.claude/
+
+# Source files (not needed in repo)
+stitch_apel_design_the_aviator_landing/
+website/
+
+# Zip files
+*.zip
