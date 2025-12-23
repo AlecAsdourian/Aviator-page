@@ -77,16 +77,12 @@
 </div>
 </a>
 <div class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#">Residence</a>
-<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#">Gallery</a>
+<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#gallery">Gallery</a>
 <a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#">Specs</a>
 <a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="about.html">About Us</a>
-<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#">Contact</a>
+<a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="#contact">Contact</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="hidden md:flex items-center justify-center h-10 px-6 border border-white/20 hover:border-white text-sm font-bold uppercase tracking-wide transition-all rounded hover:bg-white/5">
-                        Log In
-                    </button>
 <a href="book-stay.html" class="flex items-center justify-center h-10 px-6 bg-primary hover:bg-red-700 text-white text-sm font-bold uppercase tracking-wide transition-all rounded shadow-[0_0_15px_rgba(202,7,24,0.3)] hover:shadow-[0_0_25px_rgba(202,7,24,0.5)]">
                         Request Booking
                     </a>
@@ -99,15 +95,11 @@
 </nav>
 <header class="relative h-screen min-h-[700px] w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="The Aviator residence exterior at dusk with warm interior lighting" class="h-full w-full object-cover brightness-[0.6] contrast-[1.1]" data-alt="Modern luxury house exterior at twilight with glowing windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3SXBnd1EGvnyEHIigVeqFMc-L_KRE__8W0y1sor-LgymoWaPYz8SoqiBtyo3GcGyujBXAJtOFG0hzfznvIDx3re0UeThPCnAJVxJ3Dcd-bt02A8Nhz2In4tgXXERR6Cj6KO2SEFRDgmqE1dhG5Hl8WTARylhgHqW7qIKON1EQpd9QbeGRU5rCu-ks1D7tqMEA9SxS-qctmnegS-q7nhL02AR0pNkRnqSTxgJ47mNrN-9OUaVDtyCpHsahP-drAcuf55u72Vi-akLh"/>
+<img alt="Aerial view of The Aviator residence" class="h-full w-full object-cover brightness-[0.6] contrast-[1.1]" src="images/gallery/Aerials-7.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#0B0B0D]"></div>
 <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
 </div>
 <div class="relative z-10 container mx-auto px-4 pt-20 text-center">
-<div class="inline-flex items-center gap-2 border border-white/20 bg-black/40 backdrop-blur-sm px-4 py-1.5 rounded-full mb-8 animate-fade-in-up">
-<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-<span class="text-xs font-semibold tracking-widest uppercase text-white/90">Exclusive Listing</span>
-</div>
 <h1 class="text-6xl md:text-8xl lg:text-9xl font-black text-white uppercase tracking-tighter mb-4 leading-none drop-shadow-2xl">
                 The Aviator
             </h1>
@@ -215,51 +207,103 @@
 </div>
 </div>
 </section>
-<section class="py-24 bg-[#111113] clip-diagonal pb-40">
+<section id="gallery" class="py-24 bg-[#111113] pb-40">
 <div class="container mx-auto px-4">
 <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-6">
 <h3 class="text-4xl font-bold text-white uppercase tracking-tight">Visual Manifest</h3>
-<div class="flex flex-wrap gap-2">
-<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-primary text-white">All</button>
-<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all">Exterior</button>
-<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all">Interior</button>
-<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all">Views</button>
-<button class="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all">Details</button>
+<div class="flex flex-wrap gap-2" id="gallery-filters">
+<button class="filter-btn px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-primary text-white" data-filter="all">All</button>
+<button class="filter-btn px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all" data-filter="exterior">Exterior</button>
+<button class="filter-btn px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all" data-filter="living">Living Areas</button>
+<button class="filter-btn px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all" data-filter="bedrooms">Bedrooms</button>
+<button class="filter-btn px-4 py-2 text-xs font-bold uppercase tracking-wider rounded bg-transparent border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all" data-filter="details">Details</button>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[300px]">
-<div class="lg:col-span-2 lg:row-span-2 group relative overflow-hidden rounded cursor-pointer">
-<img alt="Expansive living room with floor to ceiling windows overlooking ocean" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" data-alt="Modern living room with ocean view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL5jaCXVyPRgspOZZPEIj8WXk4QJu-i_E2AygBI0M9OS6K1_Gd6Y6q5V6jIIp4k-5XfjjDBjRy2yTOjZf5S17a6twUDDxFJPPS7AFyBuBWedbejYXRTITDgS2L4f0YbJsZw6c2axK8cSBwsTAbSY2XVjOJJsE0FdudFck6XVNpa84CA_V1II-V7gVisXOiCc0m6vE8PKckqIet8bBn0RmU-t5VruCy838KG49dbrdAusld2bej6bU6uv_D2xsTJ278uYEUjd74OclE"/>
+<div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[300px]">
+<!-- Hero Images - Initially Visible -->
+<div class="gallery-item lg:col-span-2 lg:row-span-2 group relative overflow-hidden rounded cursor-pointer" data-category="exterior">
+<img src="images/gallery/bExterior Dusk1.jpg" alt="Exterior view at dusk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Interior</span>
-<h4 class="text-2xl font-bold text-white">Main Hangar Living</h4>
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Exterior</span>
+<h4 class="text-2xl font-bold text-white">Dusk Panorama</h4>
 </div>
 </div>
-<div class="lg:row-span-2 group relative overflow-hidden rounded cursor-pointer">
-<img alt="Vertical shot of modern staircase with industrial design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" data-alt="Modern staircase design detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVhS30PEkpZBzYiy-01T3NNsDUU7BxsGhFxMObbM2nViuF0GagyDeEJLKjvwqZ2JTcfaQEyHSNUrBVxiHJyMDbWkUsay7D2JARzzXRD_Oiy0MNHULc-p2WKxlvdp767uU1VJuKTNxX2YKCWETbRs0VN_JGGNaK3g5mlnY3glx7RdMiu-xGU5F7TvvZII1Q50CQHqB--DhUpI5tj5dqJIgmhyZST2OPix9C7QDFmPx5jkThizQURZ4ti3CHdh5y_yM2kl91sZidioYn"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Details</span>
-<h4 class="text-2xl font-bold text-white">Vertical Ascent</h4>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded cursor-pointer">
-<img alt="Modern kitchen with black marble island" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" data-alt="Minimalist luxury kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKsNlum-D8FEcs7x6VHpYz_O1IZBlPoZ4HjY9WpAUaPhw2omnXnMjCRvDWc_Lf7kHIuOJEqetk-LfbBX1MeQhiycabbZ1_mgreZoTwMOg-tIexD5oxZnNKFKHwH3kiGtSJ6TA52PCmD__u5h6lD7JCL0JptnwjyFzrR_taeTRS8DK4--YUYUWaoUJyrKNoUJ_sUPm35P5CtiVILW_Bs65pjimmU4V5loEdUgwH0tdEzmsnkfvDPIiX15MOfygFdxPoJjJYLK9d1YFA"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Kitchen</span>
-<h4 class="text-lg font-bold text-white">Culinary Command</h4>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded cursor-pointer">
-<img alt="Outdoor patio area with firepit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]" data-alt="Patio lounge area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1q0GnW2oyCrgeuNskthVrCRkMXsLI3synQi73CSurxT3tMrWsiuT2V-QkEaT0JrLj0Zxt4yBgH7smV5U8CdDzFmu7TStNvVl-RWY6JJOFcHL7uAs1OOSKjAGRjZN0R3crv0UvVOqaU59zpRwnhlZhMkNJ9SitZmS28Cr4ROXOEwOOANI-8VvJ_ejAOFtnMd1RhKqmrxx-ft-OuOWSoeY19KXbYb5qCjvyGEl3vTVyEOkQXaGyYEPmZIyckaBC71a6Q0mxQm4CARha"/>
+
+<div class="gallery-item group relative overflow-hidden rounded cursor-pointer" data-category="exterior">
+<img src="images/gallery/Aerials-1.jpg" alt="Aerial view of the property" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Exterior</span>
-<h4 class="text-lg font-bold text-white">Observation Deck</h4>
+<h4 class="text-lg font-bold text-white">Aerial View</h4>
+</div>
+</div>
+
+<div class="gallery-item group relative overflow-hidden rounded cursor-pointer" data-category="living">
+<img src="images/gallery/cEntry and Living1.jpg" alt="Entry and living area" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Living Areas</span>
+<h4 class="text-lg font-bold text-white">Entry & Living</h4>
+</div>
+</div>
+
+<div class="gallery-item group relative overflow-hidden rounded cursor-pointer" data-category="living">
+<img src="images/gallery/dKitchen and Dining1.jpg" alt="Kitchen and dining area" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Living Areas</span>
+<h4 class="text-lg font-bold text-white">Kitchen & Dining</h4>
+</div>
+</div>
+
+<div class="gallery-item lg:row-span-2 group relative overflow-hidden rounded cursor-pointer" data-category="bedrooms">
+<img src="images/gallery/iPrimary Bedroom Suite1.jpg" alt="Primary bedroom suite" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Bedrooms</span>
+<h4 class="text-2xl font-bold text-white">Primary Suite</h4>
+</div>
+</div>
+
+<div class="gallery-item group relative overflow-hidden rounded cursor-pointer" data-category="details">
+<img src="images/gallery/gStairs and Landing1.jpg" alt="Stairs and landing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Details</span>
+<h4 class="text-lg font-bold text-white">Stairs & Landing</h4>
+</div>
+</div>
+
+<div class="gallery-item group relative overflow-hidden rounded cursor-pointer" data-category="details">
+<img src="images/gallery/hHidden Room1.jpg" alt="Hidden room" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Details</span>
+<h4 class="text-lg font-bold text-white">Hidden Room</h4>
+</div>
+</div>
+
+<div class="gallery-item group relative overflow-hidden rounded cursor-pointer" data-category="details">
+<img src="images/gallery/ePowder1.jpg" alt="Powder room" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Details</span>
+<h4 class="text-lg font-bold text-white">Powder Room</h4>
+</div>
+</div>
+
+<div class="gallery-item group relative overflow-hidden rounded cursor-pointer" data-category="bedrooms">
+<img src="images/gallery/fBedroom1-1.jpg" alt="Guest bedroom" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Bedrooms</span>
+<h4 class="text-lg font-bold text-white">Guest Bedroom</h4>
+</div>
+</div>
+
+<div class="gallery-item group relative overflow-hidden rounded cursor-pointer" data-category="exterior">
+<img src="images/gallery/aExterior Afternoon1.jpg" alt="Exterior afternoon view" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Exterior</span>
+<h4 class="text-lg font-bold text-white">Afternoon View</h4>
 </div>
 </div>
 </div>
 <div class="mt-12 text-center">
-<button class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white border-b-2 border-primary pb-1 hover:text-primary transition-colors">
-                    View Full Manifest <span class="material-symbols-outlined text-sm">arrow_forward</span>
+<button id="view-all-btn" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white border-b-2 border-primary pb-1 hover:text-primary transition-colors">
+                    View All Images <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </button>
 </div>
 </div>
@@ -404,7 +448,7 @@
 </div>
 </div>
 </section>
-<footer class="bg-background-dark border-t border-white/10 pt-20 pb-10">
+<footer id="contact" class="bg-background-dark border-t border-white/10 pt-20 pb-10">
 <div class="container mx-auto px-4">
 <div class="flex flex-col lg:flex-row gap-12 mb-16">
 <div class="flex-1">
@@ -426,7 +470,7 @@
 <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
 <div class="bg-[#18181A] p-6 rounded border border-white/5 flex flex-col items-center text-center hover:border-white/20 transition-all">
 <div class="w-20 h-20 rounded-full bg-gray-700 mb-4 overflow-hidden border-2 border-white/10">
-<img alt="Portrait of lead real estate agent Vittal" class="w-full h-full object-cover" data-alt="Agent Vittal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCofrcmmefGpYEf42gSLfOntfxGHYJmatJzJ-4dMdJvGpOgZO_3qN_WdP04j3RRLN4TVZhbGEVaaNXgfMYZgRWx6A0_-pdlNeZznHhCCVSkyo8zPhKRi4nGrD63YyOLuaIyINrR4-3mKaT9K5nCqULb0wrXLjvZa2bvxIy2t7Ixk8Cue-OJFPVew90X94zqEEhnzGZp5H8zWdGPBQ1HcD3or0yS0xSVVCjtl41KEgcOovtkM-d0C62qHSsZ-GYprm4sx1Tdmeuy9b3N"/>
+<img alt="Portrait of lead real estate agent Vittal" class="w-full h-full object-cover" src="vittal_face.png"/>
 </div>
 <h4 class="text-white font-bold text-lg">Vittal Design</h4>
 <span class="text-primary text-xs uppercase tracking-widest mb-4">Lead Architect Agent</span>
@@ -436,8 +480,8 @@
 </div>
 </div>
 <div class="bg-[#18181A] p-6 rounded border border-white/5 flex flex-col items-center text-center hover:border-white/20 transition-all">
-<div class="w-20 h-20 rounded-full bg-black mb-4 flex items-center justify-center border-2 border-white/10">
-<span class="material-symbols-outlined text-3xl text-white">apartment</span>
+<div class="w-20 h-20 rounded-full bg-black mb-4 overflow-hidden border-2 border-white/10">
+<img alt="Apel Design HQ logo" class="w-full h-full object-cover" src="AAD.png"/>
 </div>
 <h4 class="text-white font-bold text-lg">Apel Design HQ</h4>
 <span class="text-primary text-xs uppercase tracking-widest mb-4">Global Office</span>
@@ -462,4 +506,29 @@
 </div>
 </div>
 </footer>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 backdrop-blur-sm">
+    <button id="lightbox-close" class="absolute top-6 right-6 z-10 text-white hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+
+    <button id="lightbox-prev" class="absolute left-6 top-1/2 -translate-y-1/2 z-10 text-white hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-5xl">chevron_left</span>
+    </button>
+
+    <button id="lightbox-next" class="absolute right-6 top-1/2 -translate-y-1/2 z-10 text-white hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-5xl">chevron_right</span>
+    </button>
+
+    <div class="max-w-7xl max-h-[90vh] w-full px-20">
+        <img id="lightbox-img" src="" alt="" class="w-full h-full object-contain"/>
+        <div id="lightbox-caption" class="text-center mt-4 text-white">
+            <span id="lightbox-category" class="text-primary text-xs font-bold uppercase tracking-widest"></span>
+            <h3 id="lightbox-title" class="text-xl font-bold mt-2"></h3>
+        </div>
+    </div>
+</div>
+
+<script src="gallery.js"></script>
 </body></html>
